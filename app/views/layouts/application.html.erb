@@ -19,12 +19,18 @@
             <li><%= link_to "Welcome", root_path %></li>
             <li><%= link_to "Church", church_path %></li>
             <li><%= link_to "Reception", reception_path %></li>
+            <li><%= link_to "Gift list", '#' %></li>
+            <li><%= link_to "Accommodation", '#' %></li>
+            <li><%= link_to "Picture upload", '#' %></li>
+            <li><%= link_to "Picture slideshow", '#' %></li>
           </ul>
         </nav>
       </div>
-      <div class="large-9 medium-8 columns">
-
+      <div class="large-7 medium-6 columns">
         <%= yield %>
+      </div>
+      <div class="large-2 medium-2 columns">        
+        <%= image_tag("logo-s.png", :alt => "logo", :class => "logo") %>
       </div>
     </div>
     <%= javascript_include_tag "application" %>
