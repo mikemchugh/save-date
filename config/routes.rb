@@ -1,8 +1,12 @@
 SaveDate::Application.routes.draw do
+  get "photo/upload"
+  get "photo/slideshow"
   root "home#index"
-  match '/welcome',    to: 'home#index',     via: 'get'
-  match '/church',     to: 'home#church',    via: 'get'
-  match '/reception',  to: 'home#reception', via: 'get'
+  match '/welcome',    to: 'home#index',      via: 'get'
+  match '/church',     to: 'home#church',     via: 'get'
+  match '/reception',  to: 'home#reception',  via: 'get'
+  match '/upload',     to: 'photo#upload',    via: 'get'
+  match '/slideshow',  to: 'photo#slideshow', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
